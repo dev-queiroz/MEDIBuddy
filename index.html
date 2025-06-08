@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>MEDIBuddy — Serviços Médicos Rápidos e Confiáveis</title>
+  <title>MEDIBuddy — Fast & Reliable Medical Services</title>
 
-  <!-- Fonte Google -->
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet"/>
-  <!-- Ícones Remix -->
+  <!-- Remix Icons -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet"/>
 
   <link rel="stylesheet" href="styles.css"/>
@@ -21,56 +21,54 @@
 
     <ul class="nav__list" id="navList">
       <li><a href="#home" class="nav__link active">Home</a></li>
-      <li><a href="#about" class="nav__link">Sobre Nós</a></li>
-      <li><a href="#services" class="nav__link">Serviços</a></li>
-      <li><a href="#contact" class="nav__link">Contato</a></li>
+      <li><a href="#about" class="nav__link">About Us</a></li>
+      <li><a href="#services" class="nav__link">Services</a></li>
+      <li><a href="#contact" class="nav__link">Contact</a></li>
     </ul>
 
-    <button class="nav__toggle" id="navToggle" aria-label="Abrir menu">
+    <button class="nav__toggle" id="navToggle" aria-label="Open menu">
       <i class="ri-menu-line"></i>
     </button>
 
-    <button class="btn btn-primary" id="btnRegister">Registrar Agora</button>
+    <button class="btn btn-primary" id="btnRegister" style="position: relative; right: 120px;">Register Now</button>
   </nav>
 
   <section class="hero container" id="home">
     <div class="hero__content">
       <h1 class="hero__title">
-        Serviços Médicos <br/>
-        <span class="highlight">Rápidos</span> e
-        <span class="highlight">Confiáveis</span>
+        Fast & <span class="highlight">Reliable</span> <br/>
+        <span class="highlight">Medical Services</span>
       </h1>
       <p class="hero__subtitle">
-        Cuide da sua saúde com a ajuda dos melhores profissionais, a qualquer
-        hora e em qualquer lugar.
+        Take care of your health with the best professionals, anytime and anywhere.
       </p>
       <button class="btn btn-secondary" id="btnServicesScroll">
-        Conheça Nossos Serviços
+        Explore Our Services
       </button>
     </div>
     <div class="hero__image-wrapper">
       <img src="assets/header-bg.png"
-           alt="Médicos e pacientes" class="hero__image" loading="lazy"/>
+           alt="Doctors and patients" class="hero__image" loading="lazy"/>
       <div class="hero__stats">
         <div class="stat">
           <i class="ri-heart-pulse-line stat__icon"></i>
           <div>
             <h3 class="stat__number">2500+</h3>
-            <p class="stat__label">Pacientes Atendidos</p>
+            <p class="stat__label">Patients Served</p>
           </div>
         </div>
         <div class="stat">
           <i class="ri-stethoscope-line stat__icon"></i>
           <div>
             <h3 class="stat__number">50+</h3>
-            <p class="stat__label">Especialidades</p>
+            <p class="stat__label">Specialties</p>
           </div>
         </div>
         <div class="stat">
           <i class="ri-time-line stat__icon"></i>
           <div>
             <h3 class="stat__number">24/7</h3>
-            <p class="stat__label">Atendimento</p>
+            <p class="stat__label">Availability</p>
           </div>
         </div>
       </div>
@@ -81,139 +79,145 @@
 <main>
   <section class="about container" id="about">
     <div class="about__text">
-      <h2 class="section-title">Sobre a MEDIBuddy</h2>
+      <h2 class="section-title">About MEDIBuddy</h2>
       <p>
-        A MEDIBuddy é uma plataforma dedicada a oferecer acesso rápido e
-        confiável a serviços médicos, conectando você com profissionais de
-        saúde experientes e garantindo atendimento de qualidade onde você
-        estiver.
+        MEDIBuddy is a platform designed to provide fast and reliable access to healthcare services,
+        connecting you with experienced professionals to ensure quality care wherever you are.
       </p>
       <p>
-        Nossa missão é facilitar o cuidado à saúde, promovendo agilidade,
-        segurança e empatia em cada atendimento.
+        Our mission is to simplify health care, delivering speed, safety, and empathy in every service.
       </p>
-      <button class="btn btn-primary" id="btnRegister2">Quero me Registrar</button>
+      <button class="btn btn-primary" id="btnRegister2">Register Now</button>
     </div>
     <div class="about__image-wrapper">
       <img src="assets/medic-group.png"
-           alt="Equipe médica sorridente" class="about__image" loading="lazy"/>
+           alt="Smiling medical team" class="about__image" loading="lazy"/>
     </div>
   </section>
 
   <section class="services container" id="services">
-    <h2 class="section-title">Nossos Serviços</h2>
+    <h2 class="section-title">Our Services</h2>
     <div class="services__grid">
       <article class="service-card">
         <i class="ri-hospital-line service-card__icon"></i>
-        <h3>Consultas Online</h3>
+        <h3>Online Consultations</h3>
         <p>
-          Converse com médicos especialistas sem sair de casa, com total
-          segurança e agilidade.
+          Talk to medical specialists from the comfort of your home, with complete safety and speed.
         </p>
       </article>
 
       <article class="service-card">
-        <i class="ri-ambulance-line service-card__icon"></i>
-        <h3>Atendimento Emergencial</h3>
+        <i class="ri-first-aid-kit-line service-card__icon"></i>
+        <h3>Emergency Assistance</h3>
         <p>
-          Equipe preparada para responder prontamente em situações de
-          emergência, 24 horas por dia.
+          A team ready to act in emergency situations 24 hours a day.
         </p>
       </article>
 
       <article class="service-card">
         <i class="ri-pulse-line service-card__icon"></i>
-        <h3>Monitoramento Remoto</h3>
+        <h3>Remote Monitoring</h3>
         <p>
-          Controle e acompanhe sua saúde com dispositivos conectados e suporte
-          constante da equipe médica.
+          Monitor your health through connected devices and continuous support from our medical team.
         </p>
       </article>
 
       <article class="service-card">
         <i class="ri-calendar-check-line service-card__icon"></i>
-        <h3>Agendamento Fácil</h3>
+        <h3>Easy Scheduling</h3>
         <p>
-          Marque consultas e exames com poucos cliques, de maneira simples e
-          rápida.
+          Book appointments and exams in just a few clicks — simple and fast.
         </p>
       </article>
     </div>
   </section>
 
   <section class="cta container">
-    <h2 class="section-title">Pronto para cuidar da sua saúde?</h2>
-    <button class="btn btn-primary" id="btnRegister3">Registrar Agora</button>
+    <h2 class="section-title">Ready to take care of your health?</h2>
+    <button class="btn btn-primary" id="btnRegister3">Register Now</button>
   </section>
 
   <section class="contact container" id="contact">
-    <h2 class="section-title">Contato</h2>
+    <h2 class="section-title">Get in Touch</h2>
+    <p class="contact__subtitle">
+      Have a question, need support or want to book a consultation? Send us a message and our team will get back to you
+      shortly.
+    </p>
+
     <form id="contactForm" class="contact__form" novalidate>
-      <div class="form-group">
-        <label for="name">Nome Completo</label>
-        <input type="text" id="name" name="name" required autocomplete="name"/>
-        <small class="error-message" aria-live="polite"></small>
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required autocomplete="name" placeholder="John Doe"/>
+          <small class="error-message" aria-live="polite"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.com"/>
+          <small class="error-message" aria-live="polite"></small>
+        </div>
       </div>
 
       <div class="form-group">
-        <label for="email">E-mail</label>
-        <input type="email" id="email" name="email" required autocomplete="email"/>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Write your message here..."></textarea>
         <small class="error-message" aria-live="polite"></small>
       </div>
 
-      <div class="form-group">
-        <label for="message">Mensagem</label>
-        <textarea id="message" name="message" rows="4" required autocomplete="off"></textarea>
-        <small class="error-message" aria-live="polite"></small>
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary" style="align-self: center; right: 230px; position: relative;">
+          Send Message
+        </button>
       </div>
-
-      <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
     </form>
   </section>
 </main>
 
-<!-- Modal de Registro -->
+<!-- Registration Modal -->
 <div class="modal" id="modalRegister" role="dialog" aria-modal="true" aria-labelledby="modalTitle"
      aria-hidden="true">
   <div class="modal__overlay" tabindex="-1"></div>
   <div class="modal__content">
-    <button class="modal__close" aria-label="Fechar modal" id="btnModalClose">
+    <button class="modal__close" aria-label="Close modal" id="btnModalClose">
       &times;
     </button>
-    <h2 id="modalTitle">Registrar na MEDIBuddy</h2>
+    <h2 id="modalTitle">Register with MEDIBuddy</h2>
     <form id="registerForm" novalidate>
       <div class="form-group">
-        <label for="regName">Nome Completo</label>
+        <label for="regName">Full Name</label>
         <input type="text" id="regName" name="regName" required autocomplete="name"/>
         <small class="error-message" aria-live="polite"></small>
       </div>
 
       <div class="form-group">
-        <label for="regEmail">E-mail</label>
+        <label for="regEmail">Email</label>
         <input type="email" id="regEmail" name="regEmail" required autocomplete="email"/>
         <small class="error-message" aria-live="polite"></small>
       </div>
 
       <div class="form-group">
-        <label for="regService">Serviço Desejado</label>
-        <select id="regService" name="regService" required>
-          <option value="" disabled selected>Selecione</option>
-          <option value="consulta">Consulta Online</option>
-          <option value="emergencia">Atendimento Emergencial</option>
-          <option value="monitoramento">Monitoramento Remoto</option>
-          <option value="agendamento">Agendamento Fácil</option>
+        <label for="regService">Desired Service</label>
+        <select id="regService" name="regService"
+                style="padding: 0.75rem 1rem; border-radius: 12px; border: 2px solid #28bf96; font-size: 1rem; transition: all 0.3s ease; background-color: #f9f9f9;"
+                required>
+          <option value="" disabled selected>Select</option>
+          <option value="consultation">Online Consultation</option>
+          <option value="emergency">Emergency Assistance</option>
+          <option value="monitoring">Remote Monitoring</option>
+          <option value="scheduling">Easy Scheduling</option>
         </select>
         <small class="error-message" aria-live="polite"></small>
       </div>
 
-      <button type="submit" class="btn btn-primary">Enviar Registro</button>
+      <button type="submit" class="btn btn-primary">Submit Registration</button>
     </form>
   </div>
 </div>
 
 <footer class="footer">
   <div class="container footer__container">
-    <p>© 2025 MEDIBuddy. Todos os direitos reservados.</p>
+    <p>&copy; 2025 Douglas Queiroz. All rights reserved.</p>
     <div class="footer__socials">
       <a href="#" aria-label="Facebook" target="_blank"><i class="ri-facebook-fill"></i></a>
       <a href="#" aria-label="Twitter" target="_blank"><i class="ri-twitter-fill"></i></a>

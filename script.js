@@ -1,4 +1,4 @@
-// Menu toggle mobile
+// ==================== MENU MOBILE ====================
 const navToggle = document.getElementById("navToggle");
 const navList = document.getElementById("navList");
 
@@ -6,20 +6,19 @@ navToggle.addEventListener("click", () => {
     navList.classList.toggle("active");
 });
 
-// Close menu on link click (mobile)
 document.querySelectorAll(".nav__link").forEach((link) =>
     link.addEventListener("click", () => {
         navList.classList.remove("active");
     })
 );
 
-// Scroll suave para serviços
+// ==================== SCROLL SUAVE ====================
 const btnServicesScroll = document.getElementById("btnServicesScroll");
-btnServicesScroll.addEventListener("click", () => {
+btnServicesScroll?.addEventListener("click", () => {
     document.getElementById("services").scrollIntoView({behavior: "smooth"});
 });
 
-// Modal de registro
+// ==================== MODAL DE REGISTRO ====================
 const btnRegisters = [
     document.getElementById("btnRegister"),
     document.getElementById("btnRegister2"),
@@ -28,17 +27,19 @@ const btnRegisters = [
 
 const modalRegister = document.getElementById("modalRegister");
 const btnModalClose = document.getElementById("btnModalClose");
+const modalOverlay = modalRegister.querySelector(".modal__overlay");
 
-btnRegisters.forEach((btn) =>
-    btn.addEventListener("click", () => {
-        modalRegister.classList.add("active");
-        modalRegister.setAttribute("aria-hidden", "false");
-        document.body.style.overflow = "hidden";
-    })
-);
+btnRegisters.forEach((btn) => btn?.addEventListener("click", () => openModal()));
 
 btnModalClose.addEventListener("click", closeModal);
-modalRegister.querySelector(".modal__overlay").addEventListener("click", closeModal);
+modalOverlay.addEventListener("click", closeModal);
+
+function openModal() {
+    modalRegister.classList.add("active");
+    modalRegister.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+    modalRegister.querySelector("input")?.focus();
+}
 
 function closeModal() {
     modalRegister.classList.remove("active");
@@ -46,16 +47,23 @@ function closeModal() {
     document.body.style.overflow = "";
 }
 
-// Form Validation Helpers
+// Escape key to close modal
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modalRegister.classList.contains("active")) {
+        closeModal();
+    }
+});
+
+// ==================== FORM VALIDATION ====================
 function validateInput(input) {
     const errorMessage = input.nextElementSibling;
     if (!input.checkValidity()) {
         if (input.validity.valueMissing) {
-            errorMessage.textContent = "Campo obrigatório";
+            errorMessage.textContent = "This field is required.";
         } else if (input.type === "email" && input.validity.typeMismatch) {
-            errorMessage.textContent = "Email inválido";
+            errorMessage.textContent = "Invalid email address.";
         } else {
-            errorMessage.textContent = "Valor inválido";
+            errorMessage.textContent = "Invalid input.";
         }
         return false;
     } else {
@@ -64,12 +72,11 @@ function validateInput(input) {
     }
 }
 
-// Contact Form Validation & Submission (fake)
+// ==================== CONTACT FORM ====================
 const contactForm = document.getElementById("contactForm");
 
-contactForm.addEventListener("submit", (e) => {
+contactForm?.addEventListener("submit", (e) => {
     e.preventDefault();
-
     const inputs = contactForm.querySelectorAll("input, textarea");
     let valid = true;
 
@@ -78,17 +85,16 @@ contactForm.addEventListener("submit", (e) => {
     });
 
     if (valid) {
-        alert("Mensagem enviada com sucesso!");
+        alert("Your message has been successfully sent!");
         contactForm.reset();
     }
 });
 
-// Register Form Validation & Submission (fake)
+// ==================== REGISTER FORM ====================
 const registerForm = document.getElementById("registerForm");
 
-registerForm.addEventListener("submit", (e) => {
+registerForm?.addEventListener("submit", (e) => {
     e.preventDefault();
-
     const inputs = registerForm.querySelectorAll("input, select");
     let valid = true;
 
@@ -97,8 +103,17 @@ registerForm.addEventListener("submit", (e) => {
     });
 
     if (valid) {
-        alert("Registro enviado com sucesso!");
+        alert("Registration submitted successfully!");
         registerForm.reset();
         closeModal();
     }
+});
+
+// ==================== OPTIONAL: SCROLLREVEAL INIT ====================
+ScrollReveal().reveal(".section-title, .hero__content, .service-card", {
+    origin: "bottom",
+    distance: "40px",
+    duration: 800,
+    interval: 100,
+    reset: false,
 });
