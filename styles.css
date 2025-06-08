@@ -247,6 +247,7 @@ body {
 }
 
 .about__image {
+  margin-top: 70px;
   width: 100%;
   border-radius: 25px;
   box-shadow: 0 25px 50px rgba(40, 191, 150, 0.15);
